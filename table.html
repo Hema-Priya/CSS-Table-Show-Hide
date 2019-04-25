@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+
+.grid-container {
+  display: inline-grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: auto auto;
+   justify-content: center;
+}
+
+
+.grid-item {
+ 
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration:none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  box-shadow: 0 9px #999;
+}
+.button1 {background-color: #008CBA;} /* Blue */
+.button2 {background-color: #f44336;} /* Red */ 
+
+.button1:active {
+  background-color: rgb(3, 67, 88);
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.button2:active {
+  background-color: #be0808;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+</style>
+
+<script>
+        function myFunction(elementId) {
+            if(elementId==b1)
+          document.getElementById("Tab").style.display = "inline-grid";
+          else
+          document.getElementById("Tab").style.display = "none";
+        }
+        </script>
+</head>
+<body>
+
+<h1>A table using Grid Layout:</h1>
+
+<div id="Tab" class="grid-container" >
+  <div class="grid-item item">Name</div>
+  <div class="grid-item item">Id</div>
+  <div class="grid-item item">Priya</div>  
+  <div class="grid-item item">4</div>
+  <div class="grid-item item">Navya</div>
+  <div class="grid-item item">5</div>
+</div>
+
+<div>
+<button id="b1" class="button button1" onclick="myFunction(b1)">Show</button>
+<button id="b2" class="button button2" onclick="myFunction(b2)">Hide</button>
+</div>
+
+</body>
+</html>
